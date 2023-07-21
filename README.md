@@ -54,7 +54,7 @@ Enabling the cutaway feature will remove one quadrant from rendering, allowing o
 
 Enabling the shading feature will add shadows and lighting. While this is not physically accurate, as this program is in the subatomic level, this may allow for clearer depth when zoomed-in.
 
-# Inspirations #
+# Inspiration #
 https://www.youtube.com/watch?v=W2Xb2GFK2yc
 
 
