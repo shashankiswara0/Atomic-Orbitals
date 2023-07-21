@@ -203,8 +203,8 @@ export class ElectronAnimation extends CanvasAnimation {
      */
     updateFromGUI() {
         let changed = false;
-        if (this.atomicNumber != this.gui.get("atomic-number")) {
-            this.atomicNumber = this.gui.get("atomic-number");
+        if (this.atomicNumber != this.gui.get("public-atomic-number")) {
+            this.atomicNumber = this.gui.get("public-atomic-number");
             changed = true;
         }
         if (this.atomicNumber == 1) {
@@ -226,6 +226,7 @@ export class ElectronAnimation extends CanvasAnimation {
      *
      */
     draw() {
+        console.log("Reached");
         this.updateFromGUI();
         this.playerPosition.add(this.gui.walkDir());
         this.gui.getCamera().setPos(this.playerPosition);

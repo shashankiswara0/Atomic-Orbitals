@@ -212,7 +212,7 @@ export class GUI {
                 value = values.value;
                 range_elem.value = value;
                 val_elem.innerHTML = value;
-                this.controlsValues["private-" + id] = parseInt(value);
+                this.controlsValues[id] = parseInt(value);
             }
             if ("min" in values) {
                 range_elem.min = values.min;
@@ -258,12 +258,7 @@ export class GUI {
             //Update remaining buttons
             let button = element;
             if (button.id == "atomic-activate-button") {
-                this.controlsValues["atomic-number"] = this.controlsValues["private-atomic-number"];
-            }
-            else if (button.id == "orbital-activate-button") {
-                this.controlsValues["n-number"] = this.controlsValues["private-n-number"];
-                this.controlsValues["l-number"] = this.controlsValues["private-l-number"];
-                this.controlsValues["m-number"] = this.controlsValues["private-m-number"];
+                this.controlsValues["public-atomic-number"] = this.controlsValues["atomic-number"];
             }
         }
     }
@@ -309,13 +304,10 @@ export class GUI {
         this.controlsValues["n-number"] = 1;
         this.controlsValues["l-number"] = 0;
         this.controlsValues["m-number"] = 0;
-        this.controlsValues["private-n-number"] = 1;
-        this.controlsValues["private-l-number"] = 0;
-        this.controlsValues["private-m-number"] = 0;
         this.controlsValues["cutaway"] = false;
         this.controlsValues["shading"] = false;
         this.controlsValues["atomic-number"] = 1;
-        this.controlsValues["private-atomic-number"] = 1;
+        this.controlsValues["public-atomic-number"] = 1;
     }
     /**
      *
