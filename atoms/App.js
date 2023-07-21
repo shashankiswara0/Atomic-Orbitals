@@ -101,7 +101,7 @@ export class ElectronAnimation extends CanvasAnimation {
     getElectronPositions(n, l, m) {
         return __awaiter(this, void 0, void 0, function* () {
             return new Promise((resolve, reject) => {
-                const path = `https://github.com/shashankiswara0/Atomic-Orbitals/blob/master/samples/${n}_${l}_${m}.json`;
+                const path = `/samples/${n}_${l}_${m}.json`;
                 fetch(path)
                     .then(response => response.text())
                     .then(data => {
